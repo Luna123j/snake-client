@@ -12,6 +12,10 @@ const connect = function() {
     console.log(data);
   });
 
+  conn.on("connect", () => {
+    conn.write("Name: SJ")
+  });
+
   return conn;
 };
 module.exports = connect;
